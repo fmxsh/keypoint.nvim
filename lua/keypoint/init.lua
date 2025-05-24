@@ -1155,8 +1155,8 @@ local function get_key_and_desc_action_keys(prefix_key)
 end
 local function get_local_or_global_group_id(context, prefix_key, key_span)
 	local group_id
-	local project_dir = require("phxman.properties").current_project.relative_project_path or "No Project Set"
-	local buffer = require("phxman.helpers").get_current_buffer_name()
+	local project_dir = require("phxm.properties").current_project.relative_project_path or "No Project Set"
+	local buffer = require("phxm.helpers").get_current_buffer_name()
 	--
 	-- Print the value of key_span for debugging purposes
 	if key_span == "project" then
@@ -1173,7 +1173,7 @@ local function get_local_or_global_group_id(context, prefix_key, key_span)
 	return group_id
 end
 
--- TODO: Decouple, move elsewhere, not dependent on phxman...
+-- TODO: Decouple, move elsewhere, not dependent on phxm...
 function M.stats_calculate_key_score(prefix_key, key_span)
 	local dynkey = require("dynkey")
 	-- Read the table from disk for this prefix_key
